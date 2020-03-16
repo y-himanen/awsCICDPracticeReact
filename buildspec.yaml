@@ -9,4 +9,4 @@ phases:
       - npm install
   build:
     commands:
-      - npm build run && aws s3 sync build/ s3://yasmines-pipeline-bucket
+      - npm run build && aws s3 sync build/ s3://yasmines-pipeline-bucket
