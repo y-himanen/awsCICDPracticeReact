@@ -3,9 +3,9 @@ phases:
   install:
     commands:
       - echo "building the project"
-  build:
+  pre_build:
     commands:
       - npm install
-  post_build:
+  build:
     commands:
-      - npm build run
+      - npm build run && aws s3 sync build/ s3://yasmine-pipeline-bucket
